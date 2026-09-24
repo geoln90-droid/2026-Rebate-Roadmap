@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    :root {
+        --brand-gold: #ffc42a;
+        --brand-black: #000000;
+        --brand-light-gray: #f4f4f4;
+        --text-gray: #333333;
+    }
+
+    body {
+        font-family: 'Proxima Nova', Arial, sans-serif;
+        color: var(--text-gray);
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .pdf-page {
+        width: 8.5in;
+        height: 11in;
+        margin: 0 auto;
+        padding: 0.5in;
+        box-sizing: border-box;
+        position: relative;
+        page-break-after: always;
+        background: white;
+    }
+
+    header {
+        border-bottom: 6px solid var(--brand-gold);
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Industry', sans-serif;
+        text-transform: uppercase;
+        margin: 0;
+        color: var(--brand-black);
+        font-weight: 700;
+    }
+
+    h1 { font-size: 26pt; line-height: 0.9; }
+    h2 { font-size: 14pt; margin-bottom: 0; color: #fff; border: none; }
+    h3 { font-size: 11pt; margin-bottom: 5px; }
+
+    /* Step Header Styling */
+    .step-section { margin-bottom: 25px; }
+    .step-header-v1 { 
+        display: flex; 
+        align-items: center; 
+        background: var(--brand-black); 
+        color: #fff; 
+        padding: 10px 20px; 
+    }
+    .step-num { 
+        color: var(--brand-gold); 
+        margin-right: 15px; 
+        font-size: 18pt; 
+        font-family: 'Industry'; 
+    }
+
+    /* Form & Tables */
+    .form-container { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px 25px; 
+        background: var(--brand-light-gray); 
+        padding: 20px; 
+        border-radius: 4px;
+        margin-top: 15px;
+    }
+    .field { border-bottom: 1.5px solid #bbb; padding-bottom: 4px; }
+    .label { font-size: 7.5pt; font-weight: bold; text-transform: uppercase; color: #666; display: block; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { background: var(--brand-black); color: #fff; font-family: 'Industry'; font-size: 8pt; text-align: left; padding: 8px; }
+    td { border-bottom: 1px solid #ddd; padding: 6px 8px; font-size: 7.8pt; vertical-align: top; }
+    .gold-row { background: rgba(255, 196, 42, 0.1); }
+
+    /* The "Snap" Footer Styling */
+    .footer-anchor {
+        background: var(--brand-black);
+        color: #fff;
+        padding: 15px 25px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 0 4px 4px; 
+        margin-top: 0; 
+    }
+
+    .gold-note-box {
+        background: var(--brand-gold);
+        padding: 12px;
+        font-weight: bold;
+        font-size: 8pt;
+        text-align: center;
+        border-radius: 4px 4px 0 0; 
+        color: var(--brand-black);
+        margin-top: 20px;
+    }
+
+    /* Step content container for Page 1 Step 4 */
+    .step-content-footer {
+        padding: 15px 20px; 
+        background: var(--brand-light-gray); 
+        margin: 0;
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .badge { 
+        background: var(--brand-black); 
+        color: var(--brand-gold); 
+        padding: 5px 10px; 
+        font-family: 'Industry'; 
+        font-weight: bold; 
+        font-size: 10pt; 
+        border-radius: 2px; 
+        border: 1px solid var(--brand-gold); 
+    }
+
+    @media print { .pdf-page { border: none; margin: 0; } }
+</style>
+</head>
+<body>
+
+<div class="pdf-page">
+    <header>
+        <div>
+            <h1>2026 REBATE ROADMAP</h1>
+            <div style="font-size: 10pt; font-weight: bold; color: #555; margin-top: 5px;">SAVE ON ENERGY RETROFIT PORTAL: POWERFOIL X4 EDITION</div>
+        </div>
+        <div class="badge">BOOTH 52CC</div>
+    </header>
+
+    <div class="step-section">
+        <div class="step-header-v1"><span class="step-num">01</span><h2>GATHER YOUR FARM DATA</h2></div>
+        <div class="form-container">
+            <div class="field"><span class="label">Farm Legal Name</span></div>
+            <div class="field"><span class="label">Farm Registration # (FBR)</span></div>
+            <div class="field"><span class="label">HST Number</span></div>
+            <div class="field"><span class="label">Utility Provider</span></div>
+            <div class="field" style="grid-column: span 2;"><span class="label">Mailing Address</span></div>
+            <div class="field" style="grid-column: span 2;"><span class="label">Barn Installation Address (If Different)</span></div>
+            <div class="field"><span class="label">Utility Account Number</span></div>
+            <div class="field"><span class="label">Current Motor/Fan Count</span></div>
+        </div>
+    </div>
+
+    <div class="step-section">
+        <div class="step-header-v1"><span class="step-num">02</span><h2>CHOOSE YOUR UPGRADE</h2></div>
+        <p style="font-size: 9.5pt; margin-bottom: 5px; padding-left: 10px;">Select your industrial <strong>Powerfoil X4</strong> model. Engineered for high-performance dairy environments.</p>
+        <table>
+            <thead><tr><th>MODEL # EXAMPLE</th><th>DIAMETER</th><th>MOTOR TYPE</th><th>MAX REBATE</th></tr></thead>
+            <tbody>
+                <tr class="gold-row"><td><strong>F-PFX4-2404S65</strong></td><td>24 ft</td><td>Gear-Driven AC (2HP)</td><td>$4,820</td></tr>
+                <tr><td><strong>F-PFX4-1604S65</strong></td><td>16 ft</td><td>Gear-Driven AC (1.5HP)</td><td>$3,380</td></tr>
+            </tbody>
+        </table>
+        <div style="text-align: right; font-size: 8pt; font-weight: bold; margin-top: 5px; color: #d4a017;">>>> SEE PAGE 2 FOR FULL TECHNICAL DATA VAULT</div>
+    </div>
+
+    <div class="step-section">
+        <div class="step-header-v1"><span class="step-num">03</span><h2>THE PORTAL PROCESS</h2></div>
+        <ul style="font-size: 10pt; line-height: 1.5; margin: 10px 0; padding-left: 35px;">
+            <li>Register at the <strong>Save on Energy Retrofit Portal</strong>.</li>
+            <li>Input Technical Specs and Model Numbers exactly as listed on <strong>Page 2</strong>.</li>
+            <li>⚠️ <strong>NOTICE:</strong> Do not install until you receive your <strong>Notice to Proceed</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="step-section" style="margin-bottom: 0;">
+        <div class="step-header-v1"><span class="step-num">04</span><h2>INSTALL & PAYOUT</h2></div>
+        <div class="step-content-footer">
+            <p style="font-size: 10pt; margin: 0;">Once approved, install your fans and upload the final invoice to trigger your rebate cheque.</p>
+        </div>
+    </div>
+
+    <div class="footer-anchor">
+        <div style="font-family: 'Industry'; font-size: 11pt;">LOWER COSTS, BETTER COMFORT: UPGRADE YOUR AIRFLOW</div>
+        <div style="font-size: 8.5pt; text-align: right;">BOOTH 52CC | CDX 2026</div>
+    </div>
+</div>
+
+<div class="pdf-page">
+    <header>
+        <div><h1>TECHNICAL DATA VAULT</h1><div style="font-size: 10pt; font-weight: bold; color: #555; margin-top: 5px;">CERTIFIED POWERFOIL X4 SOE CODES</div></div>
+        <div class="badge">PAGE 2 OF 2</div>
+    </header>
+
+    <h3 style="background: var(--brand-black); color: var(--brand-gold); padding: 8px 15px; margin-bottom: 5px;">POWERFOIL X4 INDUSTRIAL SERIES</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 20%;">MODEL #</th>
+                <th style="width: 15%;">MANUFACTURER</th>
+                <th style="width: 8%;">SIZE</th>
+                <th style="width: 12%;">TYPE</th>
+                <th>DESCRIPTION</th>
+                <th style="width: 10%;">REBATE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>F-PFX4-1202S65</td><td>Big Ass Fans</td><td>12'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 12', 200-250V/1PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1203S65</td><td>Big Ass Fans</td><td>12'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 12', 200-250V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1204S65</td><td>Big Ass Fans</td><td>12'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 12', 400-480V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1205S65</td><td>Big Ass Fans</td><td>12'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 12', 575-600V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1402S65</td><td>Big Ass Fans</td><td>14'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 14', 200-250V/1PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1403S65</td><td>Big Ass Fans</td><td>14'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 14', 200-250V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1404S65</td><td>Big Ass Fans</td><td>14'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 14', 400-480V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1405S65</td><td>Big Ass Fans</td><td>14'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 14', 575-600V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1602S65</td><td>Big Ass Fans</td><td>16'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 16', 200-250V/1PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1603S65</td><td>Big Ass Fans</td><td>16'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 16', 200-250V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1604S65</td><td>Big Ass Fans</td><td>16'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 16', 400-480V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+            <tr><td>F-PFX4-1605S65</td><td>Big Ass Fans</td><td>16'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 16', 575-600V/3PH, 1.5HP, >725W</td><td>$3,380</td></tr>
+
+            <tr class="gold-row"><td>F-PFX4-1802S65</td><td>Big Ass Fans</td><td>18'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 18', 200-250V/1PH, 2HP, >725W</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1803S65</td><td>Big Ass Fans</td><td>18'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 18', 200-250V/3PH, 2HP, >725W</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1804S65</td><td>Big Ass Fans</td><td>18'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 18', 400-480V/3PH, 2HP, >725W</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-1805S65</td><td>Big Ass Fans</td><td>18'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 18', 575-600V/3PH, 2HP, >725W</td><td>$4,820</td></tr>
+            <tr><td>F-PFX4-2002S65</td><td>Big Ass Fans</td><td>20'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 20', 200-250V/1PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr><td>F-PFX4-2003S65</td><td>Big Ass Fans</td><td>20'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 20', 200-250V/3PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr><td>F-PFX4-2004S65</td><td>Big Ass Fans</td><td>20'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 20', 400-480V/3PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr><td>F-PFX4-2005S65</td><td>Big Ass Fans</td><td>20'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 20', 575-600V/3PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-2402S65</td><td>Big Ass Fans</td><td>24'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 24', 200-250V/1PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-2403S65</td><td>Big Ass Fans</td><td>24'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 24', 200-250V/3PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-2404S65</td><td>Big Ass Fans</td><td>24'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 24', 400-480V/3PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+            <tr class="gold-row"><td>F-PFX4-2405S65</td><td>Big Ass Fans</td><td>24'</td><td>Gear-Driven</td><td>Powerfoil X4.0, 24', 575-600V/3PH, 2HP, >725W, AFRS</td><td>$4,820</td></tr>
+        </tbody>
+    </table>
+
+    <div class="gold-note-box">
+        NOTE: REBATE AMOUNTS ARE SUBJECT TO UTILITY APPROVAL. DATA VERIFIED FOR 2026 SOE PRESCRIPTIVE STREAM.
+    </div>
+
+    <div class="footer-anchor">
+        <div style="font-family: 'Industry'; font-size: 11pt;">LOWER COSTS, BETTER COMFORT: UPGRADE YOUR AIRFLOW</div>
+        <div style="font-size: 8.5pt; text-align: right;">STRATFORD, ON | BOOTH 52CC</div>
+    </div>
+</div>
+
+</body>
+</html>
